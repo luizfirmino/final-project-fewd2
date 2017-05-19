@@ -21,17 +21,19 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0 1em;
+}
 */
     
+
+/*Paragraphs*/
+p {
+    margin-bottom: 1.1em;
 }
-/*Paragraphs*/*/
-p.red {
-    color: red;
-    margin-bottom: .5em;
-}
+/*
 article,aside,footer,header,main,menu,nav,section, {
     display:block;
 }
+*/
 dl,ol,table,ul {
     margin:0 0 1.5em;
 }
