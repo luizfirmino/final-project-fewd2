@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome to Vecta Corp.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="http://fonts.googleapis.com/css?family=Roboto:400,900,100" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script src="js/jquery.mobilemenu.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#responsive-menu').mobileMenu({prependTo:'nav'});
+            });
+        </script>
+	</head>
+
+	<body class="contactus">
+		<main>
+			<figure></figure>
+			<nav>
+				<ul id="responsive-menu">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="aboutus.html">ABOUT US</a></li>
+					<li><a href="oursolutions.html">OUR SOLUTIONS</a></li>
+					<li><a href="vsupport.html">VSUPPORT</a></li>
+					<li><a href="contactus.html">CONTACT US</a></li>
+				</ul>
+			</nav>
+			<header>
+				<h1>CONTACT US</h1>
+			</header>
+		</main>
+		
+		<section id="content">
+			<form action="" method="post">
+                <p><em>Note: Fields highlighted in red are required.</em></p>
+                <label>Name:</label> <input type="text" name="name" maxlength="30" required>
+                <hr>
+                <label>Company Name:</label> <input type="text" name="companyname" maxlength="30" required>
+                <hr>
+                <label>Phone Number:</label> <input type="tel" name="phonenumber" maxlength="20" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required title="Ex: 555-555-5555">
+                <hr>
+                <label>Email:</label> <input type="email" name="email" maxlength="30" required>
+                <hr>
+                <label style="height:100px;">Product Interest:</label>
+                <input type="checkbox" name="product" id="vprospect" value="vProspect"> vProspect 2.0<br>
+                <input type="checkbox" name="product" id="vconvert" value="vConvert"> vConvert 2.0<br>
+                <input type="checkbox" name="product" id="vretain" value="vRetain"> vRetain 1.0
+                <hr>
+                <label style="height:100px;">Current Infrastructure:</label>
+                <input type="radio" name="infrastructure" value="Mac"> Mac<br>
+                <input type="radio" name="infrastructure" value="Linux"> Linux<br>
+                <input type="radio" name="infrastructure" value="Unix"> Unix<br>
+                <input type="radio" name="infrastructure" value="Windows"> Windows
+                <hr>
+                <label>Company Size:</label>
+                <select name="companysize">
+                    <option value="1-10">1-10</option>
+                    <option value="11-100">11-100</option>
+                    <option value="101-1000">101-1000</option>
+                    <option value="More than 1000">More than 1000</option>
+                </select>
+                <hr>
+                <label>How did you hear about us?</label>
+                <select name="hearaboutus" style="height:100px;" multiple>
+                    <option value="Radio Ad">Radio Ad</option>
+                    <option value="Television Ad">Television Ad</option>
+                    <option value="Magazine Ad">Magazine Ad</option>
+                    <option value="Internet Search">Internet Search</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Other">Other</option>
+                </select>
+                <hr>
+                <label>Questions/Comments?</label> <textarea name="questions"></textarea>
+                <hr><br>
+                <input type="submit" value="Submit Form">
+            </form>
+		</section>
+		
+		<section class="greybar"></section>
+
+		<footer>
+			Copyright &copy; 2014 | Vecta Corp.<br>
+            <div class="social-media">
+                <div class="one"><a href="http://www.facebook.com">Vecta Corp on Facebook</a></div>
+                <div class="two"><a href="http://www.google.com">Vecta Corp on Google+</a></div>
+                <div class="three"><a href="http://www.rss.com">Vecta Corp RSS Feed</a></div>
+                <div class="four"><a href="http://www.twitter.com">Vecta Corp on Twitter</a></div>
+            </div>
+		</footer>
+	</body>
+</html>
