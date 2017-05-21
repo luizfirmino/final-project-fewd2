@@ -1,0 +1,318 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+.span-1{
+    width: 7.1%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-2{
+    width: 15.4%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-3{
+    width: 23.8%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-4{
+    width: 32.1%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-5{
+    width:40.4% ;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-6{
+    width: 48.8%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-7{
+    width: 57.1%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-8{
+    width: 65.4%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-9{
+    width: 73.8%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-10{
+    width: 82.1%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-11{
+    width: 90.4%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.span-12{
+    width: 98.8%;
+    height: 110px;
+    background-color: blue;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+.grid{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.grid-element{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    padding: 15px;
+    width: calc((100% - 20px * 1) / 1);
+}
+.grid-element:last-child{
+    margin-right: 10px;
+    float:right;
+}
+.text-center{
+    text-align:center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align:right;
+}
+.grid:after{
+    display:table;
+    clear: both;
+    content: '';
+}
+
+/*
+.grid-element{
+    background-color: grey;
+}
+*/
+
+@media screen and (min-width: 480px ){
+    .one-col-grid .grid-element{
+        width: calc((100% - 20px * 1) / 1);
+
+    }
+
+    .two-col-grid .grid-element{
+        width: calc((100% - 20px * 2) / 2);
+
+    }
+    .three-col-grid .grid-element{
+        width: calc((100% - 20px * 3) / 3);
+    }
+    .four-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .five-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .six-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .seven-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .eight-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .nine-col-grid .grid-element{
+        width: calc((100% - 20px * 4) /4);
+    }
+    .ten-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .eleven-col-grid .grid-element{
+        width: calc((100% - 20px * 4) /4);
+    }
+    .twelve-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+}
+
+
+@media screen and (min-width: 720px ){
+    .one-col-grid .grid-element{
+        width: calc((100% - 20px * 1) / 1);
+
+    }
+    .two-col-grid .grid-element{
+        width: calc((100% - 20px * 2) / 2);
+
+    }
+    .three-col-grid .grid-element{
+        width: calc((100% - 20px * 3) / 3);
+    }
+    .four-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .five-col-grid .grid-element{
+        width: calc((100% - 20px * 5) / 5);
+    }
+    .six-col-grid .grid-element{
+        width: calc((100% - 20px * 6) / 6);
+    }
+    .seven-col-grid .grid-element{
+        width: calc((100% - 20px * 7) / 7);
+    }
+    .eight-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+    .nine-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+    .ten-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+    .eleven-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+    .twelve-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+}
+
+
+
+@media screen and (min-width: 1024px ){
+    .one-col-grid .grid-element{
+        width: calc((100% - 20px * 1) / 1);
+    }
+    .two-col-grid .grid-element{
+        width: calc((100% - 20px * 2) / 2);
+    }
+    .three-col-grid .grid-element{
+        width: calc((100% - 20px * 3) / 3);
+    }
+    .four-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .five-col-grid .grid-element{
+        width: calc((100% - 20px * 5) / 5);
+    }
+    .six-col-grid .grid-element{
+        width: calc((100% - 20px * 6) / 6);
+    }
+    .seven-col-grid .grid-element{
+        width: calc((100% - 20px * 7) / 7);
+    }
+    .eight-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+    .nine-col-grid .grid-element{
+        width: calc((100% - 20px * 9) / 9);
+    }
+    .ten-col-grid .grid-element{
+        width: calc((100% - 20px * 10) / 10);
+    }
+    .eleven-col-grid .grid-element{
+        width: calc((100% - 20px * 10) / 10);
+    }
+    .twelve-col-grid .grid-element{
+        width: calc((100% - 20px * 10) / 10);
+    }
+
+
+}
+@media screen and (min-width: 1200px ){
+    .one-col-grid .grid-element{
+        width: calc((100% - 20px * 1) / 1);
+    }
+    .two-col-grid .grid-element{
+        width: calc((100% - 20px * 2) / 2);
+    }
+    .three-col-grid .grid-element{
+        width: calc((100% - 20px * 3) / 3);
+    }
+    .four-col-grid .grid-element{
+        width: calc((100% - 20px * 4) / 4);
+    }
+    .five-col-grid .grid-element{
+        width: calc((100% - 20px * 5) / 5);
+    }
+    .six-col-grid .grid-element{
+        width: calc((100% - 20px * 6) / 6);
+    }
+    .seven-col-grid .grid-element{
+        width: calc((100% - 20px * 7) / 7);
+    }
+    .eight-col-grid .grid-element{
+        width: calc((100% - 20px * 8) / 8);
+    }
+    .nine-col-grid .grid-element{
+        width: calc((100% - 20px * 9) / 9);
+    }
+    .ten-col-grid .grid-element{
+        width: calc((100% - 20px * 10) / 10);
+    }
+    .eleven-col-grid .grid-element{
+        width: calc((100% - 20px * 11) / 11);
+    }
+    .twelve-col-grid .grid-element{
+        width: calc((100% - 20px * 12) / 12);
+    }
+}
