@@ -5,11 +5,15 @@ h3 {font-size: 1.5em;}
 h4 {font-size: 1.3em;}
 h5 {font-size: 1.1em;}
 
+h1,h2,h3,h4,h5 {
+    line-height: normal; 
+}
+
 /*Body font*/
 body {
 /*    margin: 0;*/
 	font-size: 1em;
-	line-height: 1.2em;
+	line-height: 1.3em;
 /*	font-style: normal;*/
 	font-weight: 400;
 /*	color: #000000;*/
@@ -27,7 +31,7 @@ body {
 
 /*Paragraphs*/
 p {
-    margin-bottom: 1.1em;
+    margin-bottom: 1em;
 }
 /*
 article,aside,footer,header,main,menu,nav,section, {
@@ -90,7 +94,7 @@ blockquote {
 }
 blockquote cite {
     display:block;
-    margin-top:1.1em;
+    margin-top:.7em;
     font-size:.9em;
     text-align:right;
 }
@@ -125,18 +129,6 @@ dl {
     margin-right: 0;
 }
 
-/*
-p.uppercase {
-	text-transform: uppercase;
-}
-p.lowercase {
-    text-transform: lowercase;
-}
-
-p.capitalize {
-    text-transform: capitalize;
-}
-*/
 
 /*Tables*/
 .horizontal_dividers {
