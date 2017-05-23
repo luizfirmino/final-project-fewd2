@@ -8,7 +8,7 @@
 /* GENERAL ---------------------------------------- */
 
 html {
-    line-height: 1.5;
+    line-height: 1.5em;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -60,7 +60,7 @@ h6 {
     -webkit-text-size-adjust: 100%;
 }
 
-ul {
+ul, ol {
     padding: 0;
     list-style: none;
 }
