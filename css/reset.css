@@ -59,12 +59,12 @@ h6 {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-
+/*
 ul, ol {
     padding: 0;
     list-style: none;
 }
-
+*/
 small {
     font-size: 85%;
 }
@@ -74,7 +74,7 @@ small {
 
 
 /* NAVIGATION ---------------------------------------- */
-
+/*
 nav ul {
     margin: 0;
 }
@@ -82,7 +82,7 @@ nav ul {
 nav ul li {
     display: inline;
 }
-
+*/
 /* END-NAVIGATION ---------------------------------------- */
 
 
