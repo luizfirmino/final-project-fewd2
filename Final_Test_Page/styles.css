@@ -55,20 +55,20 @@ var {font-weight: 400;}
 img {border: 0;}
 
 /*Alignments*/
-p.t-left {text-align: left;}
-p.t-center {text-align: center;}
-p.t-right {text-align: right;}
-p.t-justify {text-align: justify;}
+.t-left {text-align: left;}
+.t-center {text-align: center;}
+.t-right {text-align: right;}
+.t-justify {text-align: justify;}
 
 /*Transformations*/
-p.uppercase {
+.uppercase {
 	text-transform: uppercase;
 }
-p.lowercase {
+.lowercase {
     text-transform: lowercase;
 }
 
-p.capitalize {
+.capitalize {
     text-transform: capitalize;
 }
 
