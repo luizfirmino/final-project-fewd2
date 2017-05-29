@@ -12,70 +12,10 @@
           height: 300px;
           margin: 50px auto;
           position: relative;
-          margin-bottom: 0px;
-          
+          margin-bottom: 0px; 
           overflow: hidden;
         }
-
-        #s1 {
-          padding: 6px;
-          background: #000000;
-          position: absolute;
-          left: 50%;
-          bottom: 25px;
-          margin-left: -36px;
-          border-radius: 20px;
-          opacity: 0.3;
-          cursor: pointer;
-          z-index: 999;
-        }
-
-        #s2 {
-          padding: 6px;
-          background: #000000;
-          position: absolute;
-          left: 50%;
-          bottom: 25px;
-          margin-left: -12px;
-          border-radius: 20px;
-          opacity: 0.3;
-          cursor: pointer;
-          z-index: 999;
-        }
-
-        #s3 {
-          padding: 6px;
-          background: #000000;
-          position: absolute;
-          left: 50%;
-          bottom: 25px;
-          margin-left: 12px;
-          border-radius: 20px;
-          opacity: 0.3;
-          cursor: pointer;
-          z-index: 999;
-        }
-
-        #s4 {
-          padding: 6px;
-          background: #000000;
-          position: absolute;
-          left: 50%;
-          bottom: 25px;
-          margin-left: 36px;
-          border-radius: 20px;
-          opacity: 0.3;
-          cursor: pointer;
-          z-index: 999;
-        }
-
-        #s1:hover,
-        #s2:hover,
-        #s3:hover,
-        #s4:hover {
-          opacity: .50;
-        }
-
+        
         .inner-wrapper {
           width: 940px;
           height: 300px;
@@ -85,33 +25,17 @@
           margin-bottom: 0px;
           overflow: hidden;
         }
-
-        .control {
-          display: none;
-        }
-
-        #Slide1:checked ~ .overflow-wrapper {
-          margin-left: 0%;
-        }
-
-        #Slide2:checked ~ .overflow-wrapper {
-          margin-left: -100%;
-        }
-
-        #Slide3:checked ~ .overflow-wrapper {
-          margin-left: -200%;
-        }
-
-        #Slide1:checked + #s1 {
-          opacity: 1;
-        }
-
-        #Slide2:checked + #s2 {
-          opacity: 1;
-        }
-
-        #Slide3:checked + #s3 {
-          opacity: 1;
+        
+        @keyframes trigger {
+            0%   {margin-left: 0%;}
+            15%   {margin-left: 0%;}
+            25%   {margin-left: -100%;}
+            30%   {margin-left: -100%;}
+            45%   {margin-left: -100%;}
+            55%   {margin-left: -200%;}
+            60%  {margin-left: -200%;}
+            75%  {margin-left: -200%;}
+            100% {margin-left: -0%;}
         }
 
         .overflow-wrapper {
@@ -126,8 +50,12 @@
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-        }
+          animation-name: trigger;
+          animation-duration: 30s;
+          animation-iteration-count: infinite;
 
+        }
+        
         .slide {
           width: 940px;
           float: left;
@@ -148,8 +76,7 @@
             vertical-align: middle;
             font-family: 'Lobster', cursive;
             font-size: 1.5em;
-        }
-        
+        }        
         
     </style>
 </head>
@@ -157,32 +84,27 @@
     
 <div id="slider-wrapper">
   <div class="inner-wrapper">
-    
-    <!-- BULLETS controls -->
-    <input checked type="radio" name="slide" class="control" id="Slide1" />
-    <label for="Slide1" id="s1"></label>
-    <input type="radio" name="slide" class="control" id="Slide2" />
-    <label for="Slide2" id="s2"></label>
-    <input type="radio" name="slide" class="control" id="Slide3" />
-    <label for="Slide3" id="s3"></label>
-    
+        
     <div class="overflow-wrapper">
+      
       <div class="slide">
           <ul>
               <li><img src="images/profile1.jpg"></li>
-              <li>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris varius risus sit amet nisi eleifend, et fringilla est sodales. Phasellus sagittis metus eu dapibus tempor. Nunc egestas varius dignissim. Pellentesque condimentum in ex at pharetra. Ut molestie diam vitae interdum sagittis.</li>
+              <li>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris varius risus sit amet nisi eleifend, et fringilla est sodales. Phasellus sagittis metus eu dapibus tempor.</li>
           </ul>
       </div>
+      
       <div class="slide">
         <ul>
           <li><img src="images/profile2.jpg"></li>
           <li>Sed faucibus, metus nec rhoncus venenatis, erat nisl auctor ipsum, ac tristique purus magna in urna.<br><br><br><br><br></li>
         </ul>
       </div>
+      
       <div class="slide">
          <ul>
             <li><img src="images/profile3.png"></li>
-            <li>Etiam dui elit, tempor nec vulputate vehicula, aliquet sit amet ligula. Sed fermentum quam ac congue rhoncus. Quisque mattis diam id purus iaculis sagittis id ac ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eleifend, mauris ac fermentum hendrerit, tellus tortor fringilla turpis, id lacinia tellus justo nec mi. Curabitur at velit ut orci suscipit finibus in vel dolor.</li>
+            <li>Etiam dui elit, tempor nec vulputate vehicula, aliquet sit amet ligula. Sed fermentum quam ac congue rhoncus. Quisque mattis diam id purus iaculis sagittis id ac ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</li>
          </ul>
       </div>
     </div>
