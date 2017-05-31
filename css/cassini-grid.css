@@ -2,44 +2,64 @@
         Base Styling Start
 \**********************************/
 
-/* Table of contents---
-Forms
-Images
-Helper Classes
-Font Awesome
-------*/
-/*-------------FORMS--------------*/
+/* TABLE OF CONTENTS---
+FORM
+HELPER CLASSES
+JUMBOTRON
+CASSINI TOOLTIP
+FONT AWESOME
+----------------*/
+/*-------------FORMS--------------------------------*/
+@font-face {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
 
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding-bottom: 30px;
+}
+
+/*-----Form Elements------*/
 fieldset {
-    min-width: 0;
-    padding: 1.25em 2em;
-    margin: 3em 0 2em;
-    border: 0;
+  display: block;
+  min-width: 0;
+  padding: 1.25em 2em;
+  margin: 3em 0 2em;
+  border: 0;
+  background-color: #f7f7f7;
+  border: 0.1em solid #d1d1d1;
+  border-radius: 4px;
+}
 
-}
-.fieldset-background {
-    background-color: #f7f7f7;
-}
-.fieldset-border {
-    border: 0.1em solid #d1d1d1;
-    border-radius: 4px;
-}
 fieldset[disabled] {
-    background-color: #e0dcdc;
-    opacity: 1;
+  background-color: #e0dcdc;
+  opacity: 1;
 }
 legend {
     display: block;
     font-weight: 700;
     color: #373838;
+    font-size: 1.15em;
 }
-form fieldset label, label {
-    font-weight: 700;
-    max-width: 100%;
-    display: block;
-    margin: 1em 0 .5em;
+label {
+    font-weight: 600;
+    display: inline-block;
+    margin:0 0 0.25em;
+    vertical-align: middle;
     cursor: pointer;
     color: #373838;
+}
+
+.label-inline {
+    text-align: right;
+    padding: 0.6em .5em;
+    margin-bottom: 1em;
+    display: inline-block;
 }
 
 input[type="text"],
@@ -55,42 +75,17 @@ input[type="month"],
 input[type="time"],
 input[type="date"],
 input[type="url"],
-select
-{
-    display: block;
-    height: 40px;
-    outline: none;
+select {
+    display: inline-block;
+    height: 45px;
     vertical-align: middle;
-    background: transparent;
+    background-color: transparent;
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     box-shadow: 0px 1.5px 1.5px #d6d4d4;
-    padding: .85em;
-    margin-bottom: .75em;
-}
-
-input[type="text"].input-sm,
-input[type="email"].input-sm,
-input[type="tel"].input-sm,
-input[type="password"].input-sm,
-input[type="number"].input-sm,
-input[type="search"].input-sm,
-input[type="color"].input-sm,
-input[type="date"].input-sm,
-input[type="datetime-local"].input-sm,
-input[type="month"].input-sm,
-input[type="time"].input-sm,
-input[type="date"].input-sm,
-input[type="url"].input-sm
-{
-    height: 30px;
-    padding: .75em;
-}
-
-select {
-    padding: 1.15em;
-    margin-top: 0.125em;
-    margin-bottom: 2em;
+    padding: .95em;
+    margin-bottom: 1em;
+    font-size: 0.85em;
 }
 
 option {
@@ -101,196 +96,157 @@ option {
     min-height: 1.3em;
     padding: 1px 3px 2px;
 }
+
 textarea {
-    height: 85px;
+    height: 90px;
     overflow: auto;
     resize: none;
     max-width: none;
+    background-color: transparent;
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     box-shadow: 0px 1.5px 1.5px #d6d4d4;
 }
-textarea.resize{
+textarea.resize {
     resize: both;
 }
 
-/* Full width input*/
-input[type="text"].input-full,
-input[type="email"].input-sm,
-input[type="tel"].input-full,
-input[type="password"].input-full,
-input[type="number"].input-full,
-input[type="search"].input-full,
-input[type="color"].input-full,
-input[type="date"].input-full,
-input[type="datetime-local"].input-full,
-input[type="month"].input-full,
-input[type="time"].input-full,
-input[type="date"].input-full,
-input[type="url"].input-full,
-select.input-full,
-textarea.input-full{
-    width: 100%;
+textarea.sm {
+    height: 65px;
+    padding: .75em;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="date"]:focus,
-input[type="url"]:focus,
-textarea:focus,
-select:focus {
-    border: 1.25px solid #02d8c3;
-    box-shadow: 0px 1px 1px #02d8c3;
-    outline: 0;
+input[type="text"].sm,
+input[type="email"].sm,
+input[type="tel"].sm,
+input[type="password"].sm,
+input[type="number"].sm,
+input[type="search"].sm,
+input[type="color"].sm,
+input[type="date"].sm,
+input[type="datetime-local"].sm,
+input[type="month"].sm,
+input[type="time"].sm,
+input[type="date"].sm,
+input[type="url"].sm,
+select.sm {
+    height: 38px;
+    padding: .75em;
 }
 
-input[type="text"]:required,
-input[type="email"]:required,
-input[type="tel"]:required,
-input[type="password"]:required {
-    border-color:#cc332e;
-    box-shadow: 0px 1px 1px #cc332e;
+input[type="text"]:focus,input[type="text"]:hover,
+input[type="email"]:focus,input[type="email"]:hover,
+input[type="tel"]:focus,input[type="tel"]:hover,
+input[type="password"]:focus,input[type="password"]:hover,
+input[type="number"]:focus,input[type="number"]:hover,
+input[type="search"]:focus,input[type="search"]:hover,
+input[type="color"]:focus,input[type="color"]:hover,
+input[type="date"]:focus,input[type="date"]:hover,
+input[type="datetime-local"]:focus,input[type="datetime-local"]:hover,
+input[type="month"]:focus,input[type="month"]:hover,
+input[type="time"]:focus,input[type="time"]:hover,
+input[type="date"]:focus,input[type="date"]:hover,
+input[type="url"]:focus,input[type="url"]:hover,
+textarea:focus,textarea:hover,
+select:focus,select:hover {
+  border: 1.15px solid #02d8c3;
+  box-shadow: 0px 1px 1px #02d8c3;
 }
-
-input[type="text"]:valid,
-input[type="tel"]:valid,
-input[type="email"]:valid {
-    border-color:#48d648;
-    box-shadow: 0px 1px 1px #48d648;
-}
-
 
 /*----Checkbox and Radio Buttons-----*/
-input[type="checkbox"],input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    display: inline;
-    position: relative;
-    margin: 5px auto;
-    background: linear-gradient(top, #02d8c3 0%, #45484d 100%);
-    /*  box-shadow: 0px 2px 10px #fcfff4;*/
+.check-group {
+  margin-bottom: 0.5em;
+}
+input[type=checkbox] {
+    box-sizing: content-box;
+}
+input[type=checkbox],
+input[type=radio]{
+  width     : 3em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
 }
 
-input[type=checkbox] + label,
-input[type=radio   ] + label{
-    display      : inline-block;
-    margin-left  : 0.0825em;
-    line-height  : 1.5em;
-}
-/*---Custom Check box & Radio Buttons----*/
-.cassini-check input[type="checkbox"] {
-    visibility: hidden;
+input[type=checkbox]: + label,
+input[type=radio   ]: + label{
+  display      : inline-block;
+  line-height  : 1.5em;
 }
 
-.cassini-check {
-    width: 20px;
-    /*	margin: 20px 100px;*/
-    position: relative;
+input[type=checkbox] + label > span,
+input[type=radio   ] + label > span{
+  display          : inline-block;
+  width            : 1.5em;
+  height           : 1.5em;
+  margin           : 0.25em 0.5em 0.15em 0.15em;
+  border           : 0.0625em solid #a5a5a5;
+  border-radius    : 0.25em;
+  background       : #eee;
+  background-image : linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : middle;
 }
 
-.cassini-check label {
-    cursor: pointer;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 0;
-    left: 0;
-    background: #eee;
-    border:1px solid #ddd;
+input[type=checkbox]:checked + label > span,
+input[type=radio   ]:checked + label > span{
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
 }
 
-.cassini-check label:after {
-    opacity: 0.2;
-    content: '';
-    position: absolute;
-    width: 9px;
-    height: 5px;
-    background: transparent;
-    top: 6px;
-    left: 7px;
-    border: 3px solid #02d8c3;
-    border-top: none;
-    border-right: none;
-    transform: rotate(-45deg);
+input[type=checkbox]:checked + label > span:before{
+  content     : '✓';
+  display     : inline-block;
+  width       : 1.35em;
+  color       : #00d1b2;
+  font-size   : 0.975em;
+  line-height : 1.5em;
+  text-align  : center;
+  text-shadow : 0 0 0.082em #00d1b2;
+  font-weight : 600;
 }
 
-.cassini-check label:hover::after {
-    opacity: 0.5;
+input[type=radio]:checked +  label > span > span{
+  display : inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  margin-left: 0.25em;
+  margin-top: 0.25em;
+  border: 0.0625em solid #00d1b2;
+  border-radius: 0.125em;
+  background: #02d8c3;
 }
 
-.cassini-check input[type=checkbox]:checked + label:after {
-    opacity: 1;
-}
+/*----End Checkbox and Radio Buttons-----*/
 
-.cassini-radio {
-
-}
-
-.cassini-radio input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-
-}
-
-.cassini-radio input[type="radio"] + label {
-    position: relative;
-    padding: 0 0 0 25px;
-    font-size: 16px;
-    line-height: 25px;
-    margin: 0 0 10px 0;
-}
-
-.cassini-radio input[type="radio"] + label:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 2px;
-    height: 20px;
-    width: 20px;
-    background: #ddd;
-    border: 1px solid #333;
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 0px 2px white;
-}
-
-.cassini-radio input[type="radio"]:checked + label:before {
-    background: #02d8c3;
-}
-
+/*----Custom Buttons-----*/
 input[type="button"].cassini-btn,
 input[type="reset"].cassini-btn,
-input[type="submit"].cassini-btn{
-    -webkit-appearance: button;
-    display: inline-block;
-    min-height: 40px;
-    padding: 0 2em;
-    color: #373838;
-    text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid #262626;
-    cursor: pointer;
-    box-sizing: border-box;
+input[type="submit"].cassini-btn {
+  display: inline-block;
+  min-height: 40px;
+  padding: 1em 2.5em;
+  color: #373838;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background:#fff;
+  border:1.75px solid #02d8c3;
+  box-shadow: 0px 0.75px 0.75px #02d8c3;
+  border-radius:5px;
+  cursor: pointer;
+}
+
+div.grid input.cassini-btn {
+    margin-left: 17%;
 }
 
 input[type='file'] {
-    display: block;
-    margin: 0 0 1em;
-    padding: 1em 0;
-    font-family: inherit;
-    font-size: 100%;
+ display: block;
+ margin: 0 0 1em;
+ padding: 1em 0;
+ font-family: inherit;
+ font-size: 100%;
 }
 
 input[type="submit"].cassini-btn:hover,
@@ -301,14 +257,337 @@ input[type="button"].cassini-btn:hover,
 input[type="button"].cassini-btn:focus
 {
     box-shadow: 0px 2px 5px #02d8c3;
+    color: #fff;
+    background: #02d8c3;
 }
 
-/*----------HELPER CLASSES---------*/
-.full-width  {
+/*----End Custom Buttons-----*/
+@media screen and (max-width: 320px ){
+label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    }
+.label-inline {
+        text-align: left;
+    }
+    
+div.grid label.span-2.label-inline, label.span-1.label-inline {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 15%;
+    }
+fieldset, fieldset.span-7 {
+        width: 100%;
+    }
+div.grid input.cassini-btn {
+    margin-left: 3%;
+}
+    
+input[type=checkbox], input[type=radio] {
+    margin: -0.95em;
+}
+    
+select.span-3, select.span-2.sm {
+        margin-top: 0;
+    }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="date"],
+input[type="url"],
+select { 
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    }
+select.span-3 {
+        width: 100%;
+    }
+select.span-2 {
+        width: 80%;
+    }
+textarea.span-3 {
+width: 100%;
+}
+textarea.sm {
+width: 80%;
+}
+textarea.resize {
+width: 80%;
+}
+div.span-2  {
+  width: 45%;
+}
+input[type=checkbox]: + label,
+input[type=radio   ]: + label{
+  line-height: 1em;
+}
+div.span-2 input[type=checkbox] + label > span, input[type=radio ] + label > span {
+   width: 1.85em;
+   height: 1.85em;
+}
+
+div.span-2 input[type=checkbox]:checked + label > span:before {
+width: 1.25em;
+font-size: 1.5em;
+line-height: 1.15em;
+}
+    
+div.span-2 input[type=radio]:checked + label > span > span {
+    width: 1.15em;
+    height: 1.15em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+}
+
+div.span-3 {
+    width: 50%;
+}
+ 
+div.span-3 input[type=checkbox] + label > span,
+div.span-3 input[type=radio ] + label > span {
+    width: 1.5em;
+    height: 1.5em;
+}
+div.span-3 input[type=checkbox]:checked + label > span:before{
+    font-size: 1.25em;
+    line-height: 1em;
+    }
+    
+div.span-3 input[type=radio]:checked + label > span > span {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+}
+    
+div.span-1 {
+        width: 95%;
+    }
+div.grid div.span-1 input.cassini-btn {
+            margin-left: 28%;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px ){
+input[type=checkbox], input[type=radio] {
+    margin: -0.65em;
+} 
+div.grid input.span-4 {
+    width: 70%;
+}
+div.grid input.span-2.sm {
+    width: 60%;
+    margin-left: -6%;
+}
+div.grid input.span-2 {
+    width: 68%;
+}
+div.grid label.span-2.label-inline {
+  margin-right: 5%;      
+}
+div.grid label.span-1.label-inline {
+  margin-right: 8%;      
+}
+
+fieldset.span-7 {
     width: 100%;
 }
-.full-height {
-    height: 100%;
+fieldset.span-7 label.span-2.label-inline {
+    margin-left: -5%;
+     margin-right: 8%;
+}
+
+
+div.grid input.cassini-btn {
+margin-left: 20%;
+}
+select.span-3 {
+        width: 72%;
+    }
+select.span-2,  textarea.span-3 {
+    width: 65%;
+    margin-right: 2%;
+    }
+textarea.span-3 {
+      margin-left: 3%;  
+    }
+textarea.sm, textarea.resize {
+    width: 50%;
+    margin-left: 13.5%;
+    }
+    
+div.span-2  {
+  width: 45%;
+}
+    
+div.span-2 input[type=checkbox] + label > span, input[type=radio ] + label > span {
+   width: 1.85em;
+   height: 1.85em;
+}
+
+div.span-2 input[type=checkbox]:checked + label > span:before {
+width: 1.25em;
+font-size: 1.5em;
+line-height: 1.15em;
+}
+
+div.span-2 input[type=radio]:checked + label > span > span {
+    width: 1.15em;
+    height: 1.15em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+}
+
+div.span-3 {
+    width: 95%;
+}
+div.span-3 input[type=checkbox] + label > span,
+div.span-3 input[type=radio ] + label > span {
+    width: 1.5em;
+    height: 1.5em;
+}
+div.span-3 input[type=checkbox]:checked + label > span:before{
+    font-size: 1.25em;
+    line-height: 1em;
+    }
+div.span-3 input[type=radio]:checked + label > span > span {
+    width: 0.95em;
+    height: 0.95em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+}
+
+div.span-1 {
+        width: 100%;
+}
+div.grid div.span-1 input.cassini-btn {
+            margin-left: 30%;
+}
+    
+}
+
+@media screen and (max-width: 768px ) {
+div.grid input.span-4 {
+        width: 75%;
+}
+div.grid input.span-2.sm {
+        width: 35%;
+}
+div.grid input.span-2 {
+      width: 28%;  
+}
+fieldset.span-7 {
+        width: 90%;
+}
+select.span-3 {
+        width: 70%;
+    }
+select.span-2 {
+        width: 50%;
+    }
+textarea.span-3 {
+width: 55%;
+}
+textarea.sm, textarea.resize {
+width: 35%;
+}
+div.span-3 {
+width: 95%;
+}
+div.span-3 input[type=checkbox] + label > span,
+div.span-3 input[type=radio ] + label > span {
+    width: 1.5em;
+    height: 1.5em;
+}
+div.span-3 input[type=checkbox]:checked + label > span:before{
+    font-size: 1.25em;
+    line-height: 1em;
+    }
+div.span-3 input[type=radio]:checked + label > span > span {
+    width: 0.95em;
+    height: 0.95em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+}
+div.span-1 {
+        margin-right: 12%;
+    }
+   
+}
+/*Laptop/ tablet landscape */
+@media screen and (max-width: 1024px ){
+div.span-1 {
+        margin-right: 12%;
+}
+div.span-3 {
+width: 95%;
+}
+div.span-3 input[type=checkbox] + label > span,
+div.span-3 input[type=radio ] + label > span {
+    width: 1.5em;
+    height: 1.5em;
+}
+div.span-3 input[type=checkbox]:checked + label > span:before{
+    font-size: 1.25em;
+    line-height: 1em;
+    }
+div.span-3 input[type=radio]:checked + label > span > span {
+    width: 0.95em;
+    height: 0.95em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+}
+   
+}
+
+@media screen and (max-width: 1280px ){
+    
+div.span-1 {
+        margin-right: 12%;
+    }  
+div.span-3 {
+width: 95%;
+}
+div.span-3 input[type=checkbox] + label > span,
+div.span-3 input[type=radio ] + label > span {
+    width: 1.5em;
+    height: 1.5em;
+}
+div.span-3 input[type=checkbox]:checked + label > span:before{
+    font-size: 1.25em;
+    line-height: 1em;
+    }
+div.span-3 input[type=radio]:checked + label > span > span {
+    width: 0.95em;
+    height: 0.95em;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
+} 
+    
+}
+
+/*-------------END MEDIA QUERIES--------------*/
+
+/*----------HELPER CLASSES---------*/
+
+.full-width  { 
+    width: 100%; 
+}
+.full-height { 
+    height: 100%; 
 }
 
 /*Float Classes*/
@@ -320,27 +599,13 @@ input[type="button"].cassini-btn:focus
     float: left;
 }
 
-.no-float{
+ .no-float{
     float: none;
-}
-
-/*Alignment Classes*/
-.text-left   {
-    text-align: left;
-}
-.text-right  {
-    text-align: right;
-}
-.text-center {
-    text-align: center;
-}
-.text-just {
-    text-align: justify;
 }
 
 /* Font Style Classes */
 .text-bold {
-    font-weight: bold;
+    font-weight: bold; 
 }
 .text-regular {
     font-weight: normal;
@@ -357,7 +622,7 @@ input[type="button"].cassini-btn:focus
     display: block;
 }
 
-/*List Classes */
+/*List Class */
 .list-none {
     padding: 0;
     list-style: none;
@@ -369,9 +634,9 @@ input[type="button"].cassini-btn:focus
     height:auto;
 }
 img {
-    border: 0;
-    vertical-align: middle;
-    display: inline-block;
+  border: 0;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /*----No-print Class----*/
@@ -379,6 +644,252 @@ img {
     display: none;
 }
 
+/*-------END HELPER CLASSES ------------*/
+
+/*------------CSS COMPONENT-------------*/
+
+/*-------CASSINI - JUMBOTRON-------*/
+.jumbo-nav {
+    border-bottom: none;
+    z-index: 4;
+    position: fixed;
+    overflow: visible;
+}
+.jumbotron-container {
+  width: 100%;
+  height: 60%;
+  z-index: 1;
+  overflow: hidden;
+  top: 73.5px;
+  left: 0;
+  position: fixed;
+  color: #eee;
+  background-color: #222B30;
+  box-shadow:  0 8px 6px -6px #ff3860;
+}
+.cassini-jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-right: 60px;
+    padding-left: 60px;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5px; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    text-align: center;
+    text-transform: uppercase; 
+}
+.cassini-jumbotron h1 {
+    color: #ff3860;
+    font-size: 63px;
+    font-weight: 700;
+    border: 3px solid #fffaf0;
+    padding: 0.6em 0.005em;
+    border-radius: 5px;
+    line-height: 1em;
+  }
+.cassini-jumbotron h1:hover {
+box-shadow:  0 3px 3px 3px #02d8c3;
+}
+.cassini-jumbotron p {
+  color: #ffdd57;
+  margin-bottom: 1em;
+  font-size: 1.85em;
+  line-height: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.btn_jumbo {
+    font-size: 1.2em;
+    color: #02d8c3;
+    font-weight: 500;
+    display:inline-block;
+    border:1px solid #02d8c3;
+    border-radius:5px;
+    background:#fff;
+    box-shadow: 0 2px 5px #02d8c3;
+    text-transform:uppercase;
+    padding: 0.525em;
+    text-align:center;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.btn_jumbo:hover,
+.btn_jumbo:focus {
+    color: #fff;
+    background: #02d8c3;
+    box-shadow: 1px 3px 5px #02d8c3;
+}
+.jumbo-wrapper {
+    position: absolute;
+    top: 68%;
+    width: 100%;
+    min-height: 70%;
+    z-index: 2;
+    background: white;
+}
+
+.jumbo-content {
+    margin-left: 50px;
+    padding: 0.5em 1em 1em;
+}
+
+.jumbo-content h2, .jumbo-content h3 {
+    text-align: center;
+}
+.jumbo-content h2 {
+    font-size: 2em;
+}
+
+.jumbo-content h3 {
+    font-size: 1.5em;
+}
+.jumbo-wrapper input {
+    text-align: center;
+    margin-left: 35%;
+    padding: 2.5em;
+}
+
+footer.jumbotron-footer {
+    min-height: 50px;
+    background: #111;
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer.jumbotron-footer p {
+    margin-top: 20px;
+    color: #fffaf0;
+    text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+.jumbotron-container {
+        height: 48%;
+    }
+.cassini-jumbotron {
+    padding-top: 8px;
+}
+.cassini-jumbotron h1 { 
+    box-sizing: border-box;
+    border: none;
+    margin-left: -78px;
+    margin-top: 0;
+    line-height: 0.25em;
+    margin-bottom: 0;
+    font-size: 45px;
+}
+.cassini-jumbotron p {
+    font-size: 15px;
+    margin: 0 -105px 15px;
+}
+.cassini-jumbotron a.btn_jumbo {
+   width: 75%;
+    padding: 7%;
+}
+.jumbo-wrapper {
+         margin-bottom: 15%;
+    }
+.jumbo-content {
+        margin-top: -15%;
+    }
+.jumbo-content h2 {
+    font-size: 1.17em;
+    margin-left: -22.55%;
+}
+.jumbo-content .span-4 {
+    margin-top: -5%;
+        margin-left: -15%;
+        width: 100%;
+}
+.jumbo-content h3 {
+    font-size: 1.15em;
+}
+}
+
+@media screen and (max-width: 480px) {
+.jumbotron-container {
+    height: 55%;
+} 
+.cassini-jumbotron {
+    padding-top: 2px;
+}
+.cassini-jumbotron h1 {
+    margin-left: -28px;
+    line-height: 1.55em;
+    margin-bottom: 0;
+    font-size: 35px;
+    box-sizing: border-box;
+}
+
+.cassini-jumbotron p {
+   font-size: 28px;
+    margin: 15px -135px 10px;
+}
+.cassini-jumbotron a.btn_jumbo {
+   width: 90%;
+}
+.jumbo-wrapper {
+         margin-bottom: 10%;
+}
+.jumbo-content {
+    margin-top: -5%;
+}
+.jumbo-content h2 {
+    font-size: 1.75em;
+    margin-left: -14%;
+}
+.jumbo-content .span-4 {
+    margin-left: -8%;
+    width: 95%;
+}
+    
+}
+
+@media screen and (max-width: 768px) {
+  .cassini-jumbotron p {
+   font-size: 28px;
+   margin: 15px -135px 10px;
+} 
+.jumbo-content h3 {
+    font-size: 1.25em;
+}    
+}
+/*-----------END CASSINI - JUMBOTRON--------------*/
+
+/*------------END CSS COMPONENT-------------*/
+
+/*------------JQUERY PLUGIN-------------*/
+
+/*------------CASSINI - TOOLTIP--------------*/
+#cassiniTooltip_wrapper {
+    display: none;
+    min-width: 225px;
+    height: 25px;
+    margin: 8px;
+    background: none repeat scroll 0 0 #00d1b2;
+    border-radius: 4px 4px 4px 4px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.3;
+    box-shadow: 0px 1.5px 1.5px #333;
+    border:solid 5px #eee;
+    padding: 1.5em;
+    position: absolute;
+    z-index: 999;
+    font-family:'Roboto', sans-serif;
+}
+/*------------END CASSINI - TOOLTIP--------------*/
+
+/*------------END JQUERY PLUGIN-------------*/
 
 /* ---------------FONTS - FontAwesome--------- */
 @font-face {
@@ -2727,38 +3238,26 @@ h4 {font-size: 1.3em;}
 h5 {font-size: 1.1em;}
 
 h1,h2,h3,h4,h5 {
-    line-height: normal;
+    line-height: normal; 
 }
 
 /*Body font*/
 body {
-    /*    margin: 0;*/
-    font-size: 1em;
-    line-height: 1.3em;
-    /*	font-style: normal;*/
-    font-weight: 400;
-    /*	color: #000000;*/
-    font-family: sans-serif, Helvetica Neue, Helvetica, Arial;
-    /*	padding: 1em;*/
-}
-/*
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1em;
-}
-*/
+font-size: 1em;
+line-height: 1.3em;
+font-weight: 400;
+font-family: 'Roboto', sans-serif, Helvetica Neue, Helvetica, Arial;
 
+}
 
 /*Paragraphs*/
 p {
     margin-bottom: 1em;
 }
-/*
+
 article,aside,footer,header,main,menu,nav,section, {
     display:block;
 }
-*/
 dl,ol,table,ul {
     margin:0 0 1.5em;
 }
@@ -2776,38 +3275,38 @@ var {font-weight: 400;}
 img {border: 0;}
 
 /*Alignments*/
-.t-left {text-align: left;}
-.t-center {text-align: center;}
-.t-right {text-align: right;}
-.t-justify {text-align: justify;}
+p.t-left {text-align: left;}
+p.t-center {text-align: center;}
+p.t-right {text-align: right;}
+p.t-justify {text-align: justify;}
 
 /*Transformations*/
-.uppercase {
-    text-transform: uppercase;
+p.uppercase {
+	text-transform: uppercase;
 }
-.lowercase {
+p.lowercase {
     text-transform: lowercase;
 }
 
-.capitalize {
+p.capitalize {
     text-transform: capitalize;
 }
 
 /*Paddings*/
 
 abbr {
-    font-size: 1.2em;
-
+	font-size: 1.2em;
+    
 }
 address {
-    font-weight: 400;
+	font-weight: 400;
     font-variant: small-caps;
     font-style: normal;
-    font-size: 1em;
+	font-size: 1.2em;
     line-height: 1.4em;
 }
 blockquote {
-    line-height: 1.3em;
+	line-height: 1.3em;
     margin:0 0 1.5em;
     border-left:11px solid #f0f0f0;
     padding:0 1.5em;
@@ -2823,18 +3322,22 @@ blockquote cite {
 code {
     font-size: .9em;
     font-family:Menlo,monospace;
+    color: red;
+    border: 1px solid #fff;
+    background-color: rgba(255, 0, 0, .1);
+    border-radius: 5px;
 }
 
 /*Lists*/
 ul {
-    list-style-type: square;
-    list-style-position: outside;
+	list-style-type: square;
+	list-style-position: outside;
 }
 .nested {
     list-style-type: circle;
 }
 ol {
-    list-style-type: lower-alpha;
+	list-style-type: lower-alpha;
 }
 dt {
     font-weight: 600;
@@ -2860,7 +3363,7 @@ dl {
     text-align: left;
     border-bottom: 1px solid #ddd;
     padding: 10px;
-}
+} 
 .horizontal_dividers th {
     height: 50%;
 }
@@ -2899,51 +3402,48 @@ dl {
 
 @media screen and (max-width: 600px) {
 
-    .borderd {
-        border: 0;
+.borderd {
+      border: 0;
     }
-    .borderd thead {
-        display: none;
-    }
-
-    .borderd tr {
-        margin-bottom: 10px;
-        display: block;
-        border-bottom: 2px solid #ddd;
-    }
-    .borderd tr:nth-child(even) {
-        background-color: #ffffff;
-        /*    color: #ffffff;*/
+.borderd thead {
+      display: none;
     }
 
-    .borderd td {
-        display: block;
-        text-align: right;
-        font-size: .8em;
-        border-bottom: 1px dotted #ccc;
-        border-top: 1px solid #ccc;
-        padding: .5em;
+.borderd tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+.borderd tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.borderd td {
+      display: block;
+      text-align: right;
+      font-size: .8em;
+      border-bottom: 1px dotted #ccc;
+      border-top: 1px solid #ccc;
+      padding: .5em;
     }
 
-    .borderd td:last-child {
-        border-bottom: 0;
+.borderd td:last-child {
+      border-bottom: 0;
     }
 
-    .borderd td:before {
-        content: attr(label);
-        float: left;
-        text-transform: uppercase;
-        font-weight: 600;
+.borderd td:before {
+      content: attr(label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 }
 
 /*Buttons*/
 button, [type=button],[type=reset],[type=submit] {
     display:inline-block;
-    /*    border:1px solid #0366ee;*/
     border:1px solid #147CE3;
     border-radius:7px;
-    /*    background:#0366ee;*/
     background:#147CE3;
     color:#fff;
     font-weight:600;
@@ -2958,18 +3458,13 @@ button, [type=button],[type=reset],[type=submit] {
     line-height:1.2em;
 }
 button:hover,[type=button]:hover,[type=reset]:hover,[type=submit]:hover {
-    /*
-        border:1px solid #0250bc;
-        background:#0250bc;
-
-    */  border:1px solid #135494;
+    border:1px solid #135494;
     background:#135494;
     color:#fff;
     text-decoration:none;
 }
 button:active,[type=button]:active,[type=reset]:active,[type=submit]:active {
     border:1px solid #1BC6F5;
-    /*    background:#0250bc;*/
     background:#1BC6F5;
     color:#fff;
     text-decoration:none;
@@ -2983,7 +3478,72 @@ button:active,[type=button]:active,[type=reset]:active,[type=submit]:active {
 .btn_large {
     font-size: 1.2em;
 }
+/*---------------------------------------*/
+/*Modal Window CSS Component*/
+.modalWindow {
+position: fixed;
+font-family: sans-serif, Arial, Helvetica;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: rgba(0,0,0,0.4);
+z-index: 99999;
+opacity:0;
+pointer-events: none;
+}
 
+.modalWindow:target {
+opacity:1;
+pointer-events: auto;
+}
+
+.modalWindow > div {
+width: 60%;
+position: relative;
+margin: 10% auto;
+padding: 5px 20px 13px 20px;
+border-radius: 10px;
+background: #fff;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+}
+
+.close {
+color: #6C6F70;
+text-decoration: none;
+float: right;
+font-size: 30px;
+font-weight: 600;
+cursor: pointer;
+}
+
+.close:hover {
+color: #A5A7A8;
+}
+/*-----------------------------------------------*/
+/*BackToTop Plugin*/
+.back-to-top {
+ background: none;
+ margin: 0;
+ position: fixed;
+ top:500px;
+ right:40px;    
+ width: 70px;
+ height: 70px;
+ z-index: 100;
+ display: none;
+ text-decoration: none;
+ background-color: #147CE3;
+ }
+ 
+.back-to-top i {
+ font-size: 60px;
+ background-color: #147CE3; 
+ color: #fff;
+ margin: 5px 7px 7px 7px; 
+ }
+/*--------------------------------------------*/
 
 /**********************************\
         Grid Styling Start
@@ -3569,8 +4129,3 @@ a{
     font-size: 1.5em;
 }        
 /* --- END TESTIMONIALS CSS COMPONENT ---------------------- */
-
-
-
-
-
