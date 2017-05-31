@@ -3452,5 +3452,125 @@ a{
     }
 }
 
+/* --- LIGHT BOX JS COMPONENT ---------------------- */
+#lightbox-wrapper ul {
+    list-style-type: none;
+}
+
+#lightbox-wrapper ul li {
+    display: inline-block;
+}
+
+#lightbox-wrapper ul li img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    -webkit-transition: box-shadow 0.5s; /* Safari */
+    transition: box-shadow 0.5s;
+}
+
+#lightbox-wrapper ul li img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,.7);
+    text-align: center;
+}
+
+#lightbox img {
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #111;
+    -moz-box-shadow:0 0 25px #111;
+    max-width: 940px;
+}
+/* --- END LIGHT BOX JS COMPONENT ---------------------- */
+
+
+/* --- TESTIMONIALS CSS COMPONENT ---------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+        
+#testimonials-wrapper {
+  width: 940px;
+  height: 300px;
+  margin: 50px auto;
+  position: relative;
+  margin-bottom: 0px; 
+  overflow: hidden;
+}
+
+.testimonials-inner-wrapper {
+  width: 940px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+@keyframes trigger {
+    0%   {margin-left: 0%;}
+    15%   {margin-left: 0%;}
+    25%   {margin-left: -100%;}
+    30%   {margin-left: -100%;}
+    45%   {margin-left: -100%;}
+    55%   {margin-left: -200%;}
+    60%  {margin-left: -200%;}
+    75%  {margin-left: -200%;}
+    100% {margin-left: -0%;}
+}
+
+.testimonials-overflow-wrapper {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  animation-name: trigger;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+
+}
+
+.testimonial {
+  width: 940px;
+  float: left;
+  vertical-align: middle;
+}
+
+.testimonial img {
+    width: 20%;
+    border-radius: 200px;
+}
+
+.testimonial ul {
+    list-style-type: none;
+}
+
+.testimonial ul li {
+    display: inline;
+    vertical-align: middle;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+}        
+/* --- END TESTIMONIALS CSS COMPONENT ---------------------- */
+
+
+
 
 
