@@ -1,0 +1,21 @@
+/*BackToTop Plugin*/
+.back-to-top {
+ background: none;
+ margin: 0;
+ position: fixed;
+ top:500px;
+ right:40px;    
+ width: 70px;
+ height: 70px;
+ z-index: 100;
+ display: none;
+ text-decoration: none;
+ background-color: #147CE3;
+ }
+ 
+.back-to-top i {
+ font-size: 60px;
+ background-color: #147CE3; 
+ color: #fff;
+ margin: 5px 7px 7px 7px; 
+ }
